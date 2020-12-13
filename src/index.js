@@ -5,13 +5,23 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'; // For switching Route and serving different pages
 import 'antd/dist/antd.css';
 
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import {composeWithDevTools} from 'redux-devtools-extension';
+import rootReducer from './reducers';
+
+
+//Store
+const store = createStore(rootReducer, composeWithDevTools())
 
 ReactDOM.render(
   // <React.StrictMode>
+  <Provider store={store}>
     <BrowserRouter>
       <App />
-    </BrowserRouter>,
-  // </React.StrictMode>,
+    </BrowserRouter>
+  </Provider>,
+  //</React.StrictMode>
   document.getElementById('root')
 );
 

@@ -11,7 +11,7 @@ import RegisterComplete from './pages/auth/RegisterComplete';
 import ForgotPassword  from "./pages/auth/ForgotPassword";
 
 import {auth} from './firebase';
-import {useDispatch} from 'react-redux'
+import {useDispatch} from 'react-redux';
 
 const App = () => {
   const dispatch = useDispatch()

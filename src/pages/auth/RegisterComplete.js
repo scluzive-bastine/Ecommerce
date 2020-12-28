@@ -34,7 +34,7 @@ const RegisterComplete = ({ history }) => {
             // console.log(result);
             if(result.user.emailVerified) {
                 // Remove user email from local storage
-                window.localStorage.removeItem('emilForRegistration');
+                window.localStorage.removeItem('emailForRegistration');
                 // Get user id token
                 let user = auth.currentUser
                 await user.updatePassword(password);
